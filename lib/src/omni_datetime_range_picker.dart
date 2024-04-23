@@ -21,11 +21,13 @@ class OmniDateTimeRangePicker extends StatelessWidget {
     required this.type,
     this.selectableDayPredicate,
     this.defaultView = DefaultView.start,
+    this.showTabBar = true,
   });
 
   final DateTime? startInitialDate;
   final DateTime? startFirstDate;
   final DateTime? startLastDate;
+  final bool showTabBar;
 
   final DateTime? endInitialDate;
   final DateTime? endFirstDate;
