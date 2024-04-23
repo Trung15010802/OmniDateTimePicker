@@ -23,7 +23,7 @@ class OmniDtpRange extends StatefulWidget {
     this.type,
     this.selectableDayPredicate,
     this.defaultView = DefaultView.start,
-    this.showTabBar = true,
+    required this.showTabBar,
   });
 
   final DateTime? startInitialDate;

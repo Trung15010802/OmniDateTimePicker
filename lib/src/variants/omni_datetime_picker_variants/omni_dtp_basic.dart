@@ -19,6 +19,7 @@ class OmniDtpBasic extends StatelessWidget {
     this.isForce2Digits,
     this.constraints,
     this.type,
+    this.showTabBar = true,
     this.selectableDayPredicate,
   });
 
@@ -35,6 +36,7 @@ class OmniDtpBasic extends StatelessWidget {
   final BoxConstraints? constraints;
   final OmniDateTimePickerType? type;
   final bool Function(DateTime)? selectableDayPredicate;
+  final bool? showTabBar;
 
   @override
   Widget build(BuildContext context) {

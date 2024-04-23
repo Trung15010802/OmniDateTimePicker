@@ -70,6 +70,7 @@ class OmniDateTimeRangePicker extends StatelessWidget {
         type: type,
         selectableDayPredicate: selectableDayPredicate,
         defaultView: defaultView,
+        showTabBar: showTabBar,
       ),
     );
   }

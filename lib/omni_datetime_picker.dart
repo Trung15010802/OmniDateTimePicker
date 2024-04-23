@@ -34,6 +34,7 @@ Future<DateTime?> showOmniDateTimePicker({
   bool? barrierDismissible,
   OmniDateTimePickerType type = OmniDateTimePickerType.dateAndTime,
   final bool Function(DateTime)? selectableDayPredicate,
+  final bool? showTabBar,
   ThemeData? theme,
 }) {
   return showGeneralDialog(
@@ -106,6 +107,7 @@ Future<List<DateTime>?> showOmniDateTimeRangePicker({
   bool Function(DateTime)? selectableDayPredicate,
   ThemeData? theme,
   DefaultView defaultView = DefaultView.start,
+  bool? showTabBar,
 }) {
   return showGeneralDialog(
     context: context,
@@ -130,6 +132,7 @@ Future<List<DateTime>?> showOmniDateTimeRangePicker({
         child: OmniDateTimeRangePicker(
           type: type,
           startInitialDate: startInitialDate,
+          showTabBar: showTabBar ?? true,
           startFirstDate: startFirstDate,
           startLastDate: startLastDate,
           endInitialDate: endInitialDate,
