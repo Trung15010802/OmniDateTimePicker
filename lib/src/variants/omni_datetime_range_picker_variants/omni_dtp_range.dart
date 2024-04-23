@@ -23,11 +23,13 @@ class OmniDtpRange extends StatefulWidget {
     this.type,
     this.selectableDayPredicate,
     this.defaultView = DefaultView.start,
+    this.showTabBar = true,
   });
 
   final DateTime? startInitialDate;
   final DateTime? startFirstDate;
   final DateTime? startLastDate;
+  final bool showTabBar;
 
   final DateTime? endInitialDate;
   final DateTime? endFirstDate;
@@ -73,7 +75,7 @@ class _OmniDtpRangeState extends State<OmniDtpRange>
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CustomTabBar(tabController: _tabController),
+            if (widget.showTabBar) CustomTabBar(tabController: _tabController),
             ConstrainedBox(
               constraints: const BoxConstraints(
                 maxWidth: 350,
